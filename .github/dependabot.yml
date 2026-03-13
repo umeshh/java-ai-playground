@@ -1,5 +1,6 @@
 version: 2
 updates:
+  # Quarkus branch dependencies
   - package-ecosystem: maven
     directory: /
     schedule:
@@ -11,3 +12,16 @@ updates:
     schedule:
       interval: daily
     target-branch: quarkus
+
+  # Main branch dependencies
+  - package-ecosystem: maven
+    directory: /
+    schedule:
+      interval: daily
+    target-branch: main
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    target-branch: main
